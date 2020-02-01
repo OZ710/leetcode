@@ -1,4 +1,9 @@
- string longestPalindrome(string s) {
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+  string longestPalindrome(string s) {
         if(s.length()==0)
             return "";
         int n=s.length()*2 + 3;
@@ -32,7 +37,7 @@
                 C=i;
                 R=i+P[i];
             }
-             cout<<C<<" "<<P[i]<<endl; 
+            
              
         }
         string temp = string(str.begin()+(C-P[C]),str.begin()+(C+P[C]));
@@ -44,3 +49,11 @@
         }
         return res;
     }
+
+int main()
+{
+    string s="bbabababaa";
+    string str = longestPalindrome(s);
+    cout<<str;
+    return 0;
+}
